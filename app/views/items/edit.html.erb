@@ -1,0 +1,40 @@
+<h1>Editing item</h1>
+
+<% form_for(@item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :done %><br />
+    <%= f.text_field :done %>
+  </p>
+  <p>
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :due_date %><br />
+    <%= f.date_select :due_date %>
+  </p>
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.label :note_id %><br />
+    <%= f.text_field :note_id %>
+  </p>
+  <p>
+    <%= f.label :private %><br />
+    <%= f.text_field :private %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @item %> |
+<%= link_to 'Back', items_path %>
